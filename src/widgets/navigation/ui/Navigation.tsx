@@ -101,8 +101,6 @@ export async function Navigation() {
           {mePage}
           <li className="mx-auto w-6 rounded-full border border-gray-500" />
           {serverList}
-          {serverList}
-          {serverList}
           {addServer}
         </ul>
       </nav>

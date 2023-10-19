@@ -25,7 +25,8 @@ export const userRelations = relations(user, ({ many }) => ({
 export const server = pgTable("server", {
   id: serial("id").primaryKey(),
   name: text("name"),
-  owner: integer("user_id").references(() => user.id),
+  owner: integer("owner").references(() => user.id),
+  image: text("image"),
   createdAt: timestamp("created_at").defaultNow(),
   updatedAt: timestamp("updated_at"),
 });
