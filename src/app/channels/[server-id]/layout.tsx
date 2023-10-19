@@ -17,8 +17,8 @@ function ServerMenu({
     <li key={id}>
       <Link
         href={`/channels/${serverId}/${id}`}
-        className="cursor-pointer rounded-md px-2 py-0.5 text-sm
-              text-gray-200 hover:bg-white/10 hover:text-gray-100"
+        className="cursor-pointer truncate rounded-md px-2 py-0.5
+              text-sm text-gray-200 hover:bg-white/10 hover:text-gray-100"
       >
         <FontAwesomeIcon icon={faHashtag} />
         {name}
@@ -26,9 +26,9 @@ function ServerMenu({
     </li>
   ));
   return (
-    <div className="flex h-full min-w-[240px] flex-col bg-gray-700">
+    <div className="flex h-full w-[240px] min-w-[240px] flex-col bg-gray-700">
       <div className="h-10 w-full border-b border-gray-900 px-2 py-2 hover:bg-white/10">
-        <h1 className="font-semibold text-white">{name}</h1>
+        <h1 className="truncate font-semibold text-white">{name}</h1>
       </div>
       <div className="flex h-[calc(100%-120px)] flex-col gap-1">
         <ul className="scrollbar-hide relative flex h-full flex-col overflow-hidden overflow-y-scroll px-1 py-1">
