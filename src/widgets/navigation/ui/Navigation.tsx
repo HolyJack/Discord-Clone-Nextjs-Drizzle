@@ -41,6 +41,7 @@ export async function Navigation() {
           server: {
             columns: {
               name: true,
+              image: true,
               id: true,
             },
           },
@@ -50,14 +51,14 @@ export async function Navigation() {
   });
 
   const serverList = userData?.usersToServers.map(
-    ({ server: { id, name } }) => (
+    ({ server: { id, name, image } }) => (
       <MenuIcon key={id}>
         <Link
           className="flex h-full w-full items-center justify-center"
           href={`/channels/${id}`}
         >
           <Image
-            src="/discord-mark-white.svg"
+            src={image ? `/${image}` : "/discord-mark-white.svg"}
             alt={name ? name : "wow"}
             width="28"
             height="28"
