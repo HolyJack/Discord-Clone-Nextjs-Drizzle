@@ -54,14 +54,13 @@ export async function Navigation() {
     ({ server: { id, name, image } }) => (
       <MenuIcon key={id}>
         <Link
-          className="flex h-full w-full items-center justify-center"
+          className="relative flex h-full w-full items-center justify-center"
           href={`/channels/${id}`}
         >
           <Image
             src={image ? `/${image}` : "/discord-mark-white.svg"}
             alt={name ? name : "wow"}
-            width="28"
-            height="28"
+            fill
           />
         </Link>
       </MenuIcon>
